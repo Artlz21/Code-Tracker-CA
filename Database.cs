@@ -21,7 +21,7 @@ namespace CodeTracker {
                 Command.CommandText = @"
                         CREATE TABLE IF NOT EXISTS Code_Projects(
                             Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            Project STRING,
+                            Name STRING,
                             Date STRING,
                             Duration STRING
                             )

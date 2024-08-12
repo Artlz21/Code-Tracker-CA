@@ -44,3 +44,8 @@ C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\o
 C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\obj\Debug\net8.0\CodeTracker.pdb
 C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\obj\Debug\net8.0\CodeTracker.genruntimeconfig.cache
 C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\obj\Debug\net8.0\ref\CodeTracker.dll
+C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\bin\Debug\net8.0\Spectre.Console.dll
+C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\bin\Debug\net8.0\Spectre.Console.Cli.dll
+C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\bin\Debug\net8.0\de\Spectre.Console.Cli.resources.dll
+C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\bin\Debug\net8.0\fr\Spectre.Console.Cli.resources.dll
+C:\Users\darl5\OneDrive\Desktop\MicrosoftCertifications\MyProjects\CodeTracker\bin\Debug\net8.0\sv\Spectre.Console.Cli.resources.dll
