@@ -1,15 +1,11 @@
 using System.Data.SQLite;
 
-// Should be created at the start if none exists.
-// Should have a table created if none exists. 
-// Should have columns for Id, Project, Date, and Duration
-
 namespace CodeTracker {
     public class Database {
         private readonly string connectionString;
 
-        public Database (string connectionString) {
-            this.connectionString = connectionString;
+        public Database (string cs) {
+            this.connectionString = cs;
             CreateDatabase();
         }
         private void CreateDatabase () {

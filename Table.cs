@@ -25,9 +25,5 @@ namespace CodeTracker {
         public void ShowTable() {
             AnsiConsole.Write(grid);
         }
-
-        public void AddRow(ProjectEntry projectEntry) {
-            grid.AddRow(new string[]{$"{projectEntry.Id}", $"{projectEntry.Name}", $"{projectEntry.Date}", $"{projectEntry.Duration}"});
-        }
     }
 }

@@ -138,24 +138,35 @@ namespace CodeTracker {
                 char updateOption = GetUpdateOption();
 
                 string userInputUpdate;
+                ProjectEntry? entry = databaseManager.GetById(entryIdToUpdate);
+
+                if (entry == null) {
+                    Console.WriteLine("Entry not found.");
+                    return;
+                }
 
                 switch (updateOption) {
                     case 'N':
                         Console.WriteLine("Enter a name you want to update with:");
                         userInputUpdate = Console.ReadLine() ?? "";
-                        Console.WriteLine(userInputUpdate);
+                        
+                        entry.Name = userInputUpdate;
                         break;
                     case 'D':
                         Console.WriteLine("Enter a new date with the following format(MM/dd/yyyy):");
                         userInputUpdate = GetDateValue();
-                        Console.WriteLine(userInputUpdate);
+                        
+                        entry.Date = userInputUpdate;
                         break;
                     case 'U':
                         Console.WriteLine("Enter a new duration with the following format(HH:mm using 24 hour clock):");
                         userInputUpdate = GetTimeValue();
-                        Console.WriteLine(userInputUpdate);
+                        
+                        entry.Duration = userInputUpdate;
                         break;
                 }
+
+                databaseManager.Update(entry, entryIdToUpdate);
             }
             catch (Exception ex) {
                 Console.WriteLine("Error: Invalid format. " + ex.Message);
@@ -176,7 +187,7 @@ namespace CodeTracker {
                     enteredId = Console.ReadLine() ?? "";
                 }
 
-                Console.WriteLine($"Entry with ID {entryIdToDelete} deleted");
+                databaseManager.Delete(entryIdToDelete);
             }
             catch (Exception ex) {
                 Console.WriteLine("Error: Invalid format. " + ex.Message);

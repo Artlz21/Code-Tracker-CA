@@ -1,10 +1,18 @@
-﻿namespace CodeTracker {
+﻿using System.Configuration;
+
+namespace CodeTracker {
     class Program
     {
         static void Main(string[] args)
         {
-            Database database= new Database("Data Source=Code_Tracker.db");
-            Menu menu = new Menu("Data Source=Code_Tracker.db");
+            string? connectionString = ConfigurationManager.AppSettings["connectionString"];
+            
+            if (connectionString == null)
+                return;
+
+            Database database = new Database(connectionString);
+            Menu menu = new Menu(connectionString);
+            
             menu.RunApp();
         }
     }
