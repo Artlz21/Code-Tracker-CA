@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeTracker", "CodeTracker.csproj", "{736AD578-C1F4-4100-A0D8-63F704F467DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeTracker", "CodeTracker.csproj", "{748A07A8-9AB8-481F-88C2-3A0B3FB15CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{736AD578-C1F4-4100-A0D8-63F704F467DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{736AD578-C1F4-4100-A0D8-63F704F467DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{736AD578-C1F4-4100-A0D8-63F704F467DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{736AD578-C1F4-4100-A0D8-63F704F467DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748A07A8-9AB8-481F-88C2-3A0B3FB15CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748A07A8-9AB8-481F-88C2-3A0B3FB15CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748A07A8-9AB8-481F-88C2-3A0B3FB15CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748A07A8-9AB8-481F-88C2-3A0B3FB15CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

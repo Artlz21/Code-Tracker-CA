@@ -18,7 +18,12 @@ namespace CodeTracker {
                     using(var reader = command.ExecuteReader()) {
                         if (reader.HasRows) {
                             while (reader.Read()) {
-                                entries.Add(new ProjectEntry(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
+                                entries.Add(new ProjectEntry{
+                                    Id = reader.GetInt32(0), 
+                                    Name = reader.GetString(1), 
+                                    Date = reader.GetString(2), 
+                                    Duration = reader.GetString(3)
+                                });
                             }
                         }
                         else {
@@ -43,13 +48,13 @@ namespace CodeTracker {
         }
 
         // Method to handle Updating db
-        public void Update(ProjectEntry projectEntry) {
+        public void Update(ProjectEntry projectEntry, int entryId) {
             using(var connection = new SQLiteConnection(connectionString)) {
                 using(var command = connection.CreateCommand()) {
                     connection.Open();
                     command.CommandText = $@"UPDATE Code_Projects SET 
                     Name = '{projectEntry.Name}', Date = '{projectEntry.Date}', Duration = '{projectEntry.Duration}'
-                    WHERE Id = {projectEntry.Id}";
+                    WHERE Id = {entryId}";
 
                     command.ExecuteNonQuery();
                 }

@@ -2,13 +2,13 @@ using Spectre.Console;
 
 namespace CodeTracker {
     public class Table{
-        
         private Grid grid;
+
         public Table() {
-            CreateTable();
+            grid = new Grid();
         }
 
-        private void CreateTable() {
+        public void CreateTable(List<ProjectEntry> entries) {
             grid = new Grid();
             grid.AddColumn();
             grid.AddColumn();
@@ -16,6 +16,10 @@ namespace CodeTracker {
             grid.AddColumn();
 
             grid.AddRow(new string[]{"ID", "Name", "Date", "Duration"});
+
+            foreach (var entry in entries) {
+                grid.AddRow(new string[]{$"{entry.Id}", $"{entry.Name}", $"{entry.Date}", $"{entry.Duration}"});
+            }
         }
 
         public void ShowTable() {
